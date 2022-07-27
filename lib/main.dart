@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding_screen/HomeScreen.dart';
 import 'package:onboarding_screen/IntroScreen.dart';
 
 void main() {
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         "/": (context) => IntroScreen(),
+        "home": (context) => HomeScreen(),
       },
     );
   }
