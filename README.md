@@ -20,6 +20,7 @@ All you'll need to start your development:
 ## Packages
 
 - [introduction_screen `v3.0.2`](https://pub.dev/packages/introduction_screen)
+- [dots_indicator `v2.1.0`](https://pub.dev/packages/dots_indicator)
 
 
 > ## In case you're new in Flutter
