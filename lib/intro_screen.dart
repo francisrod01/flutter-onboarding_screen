@@ -22,29 +22,45 @@ const customDotsDecorator = DotsDecorator(
   ),
 );
 
+Widget _buildImage(String assertName,
+    [double width = 400, double height = 400]) {
+  return Image.asset('images/$assertName', width: width, height: height);
+}
+
+var listOfPages = [
+  PageViewModel(
+    title: "Write Title of Page",
+    body:
+        "Write the more description of the page. Write more and more description for this page.",
+    image: _buildImage('screen_1.jpg'),
+    decoration: pageDecoration,
+  ),
+  PageViewModel(
+    title: "Page 2",
+    body:
+        "Write the more description of the page. Write more and more description for this page.",
+    image: _buildImage('screen_2.jpg'),
+    decoration: pageDecoration,
+  ),
+  PageViewModel(
+    title: "Page 3",
+    body:
+        "Write the more description of the page. Write more and more description for this page.",
+    image: _buildImage('screen_3.jpg'),
+    decoration: pageDecoration,
+  ),
+];
+
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Widget _buildImage(String assertName,
-        [double width = 400, double height = 400]) {
-      return Image.asset('images/$assertName', width: width, height: height);
-    }
-
     return Scaffold(
       body: IntroductionScreen(
         globalBackgroundColor: Colors.white,
         scrollPhysics: const BouncingScrollPhysics(),
-        pages: [
-          PageViewModel(
-            title: "Write Title of Page",
-            body:
-                "Write the more description of the page. Write more and more description for this page.",
-            image: _buildImage('screen_1.jpg'),
-            decoration: pageDecoration,
-          ),
-        ],
+        pages: listOfPages,
         onDone: () {
           Navigator.pushNamed(context, "home");
         },
