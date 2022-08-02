@@ -4,6 +4,8 @@ Explain your app by showing an introduction screen at luncher.
 
 Author: [Francis Rodrigues](https://github.com/francisrod01)
 
+<img src="https://raw.githubusercontent.com/Pyozer/introduction_screen/master/demo/example.gif" width="270">
+
 
 ## Getting Started
 
@@ -17,7 +19,7 @@ All you'll need to start your development:
 
 - `flutter run` and choose your favourite device or emulator
 
-## Packages
+## Dependencies
 
 - [introduction_screen `v3.0.2`](https://pub.dev/packages/introduction_screen)
 - [dots_indicator `v2.1.0`](https://pub.dev/packages/dots_indicator)
