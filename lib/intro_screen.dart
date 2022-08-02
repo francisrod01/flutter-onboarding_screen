@@ -17,6 +17,11 @@ class IntroScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget _buildImage(String assertName,
+        [double width = 400, double height = 400]) {
+      return Image.asset('images/$assertName', width: width, height: height);
+    }
+
     return Scaffold(
       body: IntroductionScreen(
         globalBackgroundColor: Colors.white,
@@ -32,11 +37,7 @@ class IntroScreen extends StatelessWidget {
             ),
             body:
                 "Write the more description of the page. Write more and more description for this page.",
-            image: Image.asset(
-              "images/screen 1.jpg",
-              height: 400,
-              width: 400,
-            ),
+            image: _buildImage('screen_1.jpg'),
           ),
         ],
         onDone: () {
